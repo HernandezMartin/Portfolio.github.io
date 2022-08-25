@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#grid-area {
+    display: grid;
+    grid-template-areas:
+        "header nav nav"
+        "main main main"
+        "article article article"
+        "section section section "
+        "footer footer footer";
+    grid-template-rows: 250px auto auto auto 100px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #DFF6FF;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 300px;
+    font-size: 30px;
+}
+
+.linea {
+    border-top: 5px solid #2D31FA;
+    margin-bottom: 5px;
+}
+
+/*----------------------------------- Header ----------------------------------------------*/
+
+header {
+    grid-area: header;
+
+    width: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #020024, #090979);
+}
+
+header .logo {
+    width: 250px;
+    float: left;
+}
+
+nav {
+    grid-area: nav;
+    text-align: end;
+    background-image: linear-gradient(to right, #090979, #00d4ff);
+    padding-top: 20px;
+    padding-right: 20px;
+    line-height: 200px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background: #2D31FA;
+    border-radius: 50px;
+}
+
+/*----------------------------------- Index ----------------------------------------------*/
+main {
+    grid-area: main;
+}
+
+article {
+    grid-area: article;
+}
+
+section {
+    grid-area: section;
+}
+
+
+.texto {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    margin: 15px;
+}
+
+.centrado {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner {
+    text-align: center;
+}
+
+.banner img {
+    width: 900px;
+
+}
+
+/*---------------------------------- Productos ---------------------------------------------*/
+
+.contenedor-imagenes .producto {
+    width: auto;
+    position: relative;
+    height: 450px;
+    margin-bottom: 15px;
+
+}
+
+.producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    box-shadow: 6px 8px 3px 0px rgb(0 0 0 / 75%);
+}
+
+.producto:hover .overlay {
+    height: 100%;
+    cursor: pointer;
+}
+
+/*----------------------------------- Servicios ----------------------------------------------*/
+
+.tabla {
+    margin: 20px auto;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+    width: auto;
+}
+
+td,
+th {
+    border: solid 1px black;
+    padding: 20px;
+}
+
+td {
+    background-color: #BEF2FF
+}
+
+thead {
+    background-image: radial-gradient(circle, rgba(85, 165, 176, 1) 32%, rgba(0, 217, 255, 1) 86%);
+}
+
+tr:hover td {
+    background-color: rgba(0, 118, 192, 0.781);
+}
+
+/*----------------------------------- Galeria ----------------------------------------------*/
+
+.galeria {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.contenedor-imagenes {
+    display: grid;
+    max-width: 1750px;
+    margin: auto;
+    padding-bottom: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    width: 80%;
+    justify-items: stretch;
+}
+
+.contenedor-imagenes .imagen {
+    width: auto;
+    justify-content: center;
+    position: relative;
+    height: 450px;
+    box-shadow: 6px 8px 3px 0px rgb(0 0 0 / 75%);
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top, #020024, #090979, #00d4ff);
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.overlay h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay {
+    height: 100%;
+    cursor: pointer;
+}
+
+/*------------------------------------Contacto---------------------------------------------*/
+
+.contacto1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/*----------------------------------- Footer ----------------------------------------------*/
+
+.footer {
+    grid-area: footer;
+    width: 100%;
+    background-image: linear-gradient(to right, #020024, #090979, #00d4ff);
+    margin-top: auto;
+}
+
+.footer .grupo1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.footer .grupo1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.footer .grupo1 .red-social a:hover {
+    color: #ebd214;
+}
+
+.footer .grupo2 {
+    background-color: #06283D;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+
+.footer .grupo2 small {
+    font-size: 15px;
+}
+
+/*----------------------------------- Media Queries ----------------------------------------------*/
+
+@media (max-width: 990px) {
+
+    #grid-area {
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            "header  nav"
+            "main main"
+            "article article"
+            "section section "
+            "footer footer";
+        grid-template-rows: auto;
+    }
+
+    .header .logo {
+        width: 250px;
+    }
+
+    .contenedor-centrado .princpial .h1 {
+        font-size: 20px;
+        margin: 15px;
+    }
+
+    .texto {
+        font-size: 15px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .banner img {
+        display: grid;
+        max-width: 300px;
+    }
+
+    .contenedor-imagenes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .contenedor-imagenes .imagen {
+        max-height: 300px;
+    }
+
+    .contenedor-imagenes .producto {
+        max-height: 300px;
+    }
+
+    .footer .grupo1 .box {
+        font-size: 15px;
+        padding-left: 10px;
+    }
+
+}
+
+
+@media (max-width: 440px) {
+
+    #grid-area {
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            "header nav"
+            "main main"
+            "article article"
+            "section section "
+            "footer footer";
+        grid-template-rows: auto;
+    }
+
+    .header .logo {
+        width: 150px;
+    }
+
+    .contenedor-centrado .princpial .h1 {
+        font-size: 20px;
+        margin: 15px;
+    }
+
+    .texto {
+        font-size: 15px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .banner img {
+        display: grid;
+        max-width: 100%;
+        padding: 5px;
+    }
+
+    .contenedor-imagenes {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contenedor-imagenes .imagen {
+        max-height: 260px;
+    }
+
+    .contenedor-imagenes .producto {
+        max-height: 260px;
+    }
+
+    .tabla {
+        padding: 1em 2em;
+        font-size: 15px;
+    }
+
+    table {
+        width: 100%;
+        text-align: justify;
+    }
+
+    table tr {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+
+    thead {
+        display: none;
+    }
+
+    .contacto1 {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .formulario {
+        font-size: 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .comentario {
+        padding: 5px;
+        width: 100%;
+    }
+
+    .footer .grupo1 .box {
+        font-size: 15px;
+        padding-left: 10px;
+    }
+}
