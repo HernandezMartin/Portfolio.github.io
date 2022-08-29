@@ -11,8 +11,8 @@
     grid-template-areas:
         "header nav nav"
         "main main main"
-        "article article article"
-        "section section section "
+        "main main main"
+        "main main main"
         "footer footer footer";
     grid-template-rows: 250px auto auto auto 100px;
 }
@@ -72,7 +72,7 @@ nav a {
 }
 
 nav a:hover {
-    background: #2D31FA;
+    background: #96c4d8;
     border-radius: 50px;
 }
 
@@ -80,15 +80,6 @@ nav a:hover {
 main {
     grid-area: main;
 }
-
-article {
-    grid-area: article;
-}
-
-section {
-    grid-area: section;
-}
-
 
 .texto {
     font-size: 20px;
@@ -109,6 +100,18 @@ section {
 .banner img {
     width: 900px;
 
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#carousel {
+    max-width: 700px;
+    margin: 15px;
 }
 
 /*---------------------------------- Productos ---------------------------------------------*/
@@ -136,32 +139,23 @@ section {
 /*----------------------------------- Servicios ----------------------------------------------*/
 
 .tabla {
-    margin: 20px auto;
-    padding: 20px;
+    display: grid;
+    width: 95%;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    border: solid 2px black;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    background-image: linear-gradient(90deg, rgba(90,104,236,1) 0%, rgba(1,187,254,1) 35%, rgba(177,227,240,1) 69%);
+    margin: 5px;
 }
 
-table {
-    border-collapse: collapse;
-    text-align: left;
-    width: auto;
-}
-
-td,
-th {
-    border: solid 1px black;
-    padding: 20px;
-}
-
-td {
-    background-color: #BEF2FF
-}
-
-thead {
-    background-image: radial-gradient(circle, rgba(85, 165, 176, 1) 32%, rgba(0, 217, 255, 1) 86%);
-}
-
-tr:hover td {
-    background-color: rgba(0, 118, 192, 0.781);
+.servicios {
+    border: solid 1px;
+    font-size: 22px;
+    font-style: oblique;
+    padding: 5px;
+    
 }
 
 /*----------------------------------- Galeria ----------------------------------------------*/
@@ -226,9 +220,10 @@ tr:hover td {
 
 /*------------------------------------Contacto---------------------------------------------*/
 
-.contacto1 {
+.formulario {
     font-size: 20px;
     text-align: center;
+    margin: 15px;
 }
 
 
