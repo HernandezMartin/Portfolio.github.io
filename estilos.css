@@ -22,7 +22,6 @@ html {
 }
 
 body {
-    background: #DFF6FF;
     font-family: 'Poppins', sans-serif;
     min-height: 100%;
 }
@@ -63,7 +62,7 @@ nav {
 }
 
 nav a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 10px 20px;
     line-height: normal;
@@ -72,13 +71,14 @@ nav a {
 }
 
 nav a:hover {
-    background: #96c4d8;
+    background: #eeeff1;
     border-radius: 50px;
 }
 
 /*----------------------------------- Index ----------------------------------------------*/
 main {
     grid-area: main;
+
 }
 
 .texto {
@@ -88,19 +88,6 @@ main {
     margin: 15px;
 }
 
-.centrado {
-    width: 100%;
-    overflow: hidden;
-}
-
-.banner {
-    text-align: center;
-}
-
-.banner img {
-    width: 900px;
-
-}
 
 #principal {
     display: flex;
@@ -115,15 +102,54 @@ main {
 
 /*---------------------------------- Productos ---------------------------------------------*/
 
-.contenedor-productos {
-    width: auto;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 5px;
-    justify-items: center;
-    margin: 10px;
 
+.contenedor-productos {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
 }
+
+.contenedor-productos .tarjeta {
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.contenedor-productos .tarjeta:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-productos .tarjeta img {
+    width: 330px;
+    height: 220px;
+}
+
+.contenedor-productos .tarjeta h4{
+    font-weight: 600;
+}
+
+.contenedor-productos .tarjeta p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedor-productos .tarjeta a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+}
+
 
 /*----------------------------------- Servicios ----------------------------------------------*/
 
@@ -135,11 +161,38 @@ main {
     margin: 15px;
 }
 
+.tabla {
+    display: grid;
+    width: 95%;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    border: solid 2px black;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    margin: 5px;
+}
+
+.servicios {
+    border: solid 1px;
+    font-size: 22px;
+    font-style: oblique;
+    padding: 5px;
+}
+
+.servicios:hover {
+
+    background: #8297f2;
+
+}
+
 /*----------------------------------- Galeria ----------------------------------------------*/
 
-.galeria {
+.titulos {
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    width: 100%;
+    overflow: hidden;
 }
 
 .contenedor-imagenes {
