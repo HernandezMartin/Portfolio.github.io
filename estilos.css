@@ -9,7 +9,7 @@
 #grid-area {
     display: grid;
     grid-template-areas:
-        "header nav nav"
+        "header header header"
         "main main main"
         "main main main"
         "main main main"
@@ -53,25 +53,27 @@ header .logo {
 }
 
 nav {
-    grid-area: nav;
+    grid-area: header;
     text-align: end;
     background-image: linear-gradient(to right, #090979, #00d4ff);
-    padding-top: 20px;
-    padding-right: 20px;
     line-height: 200px;
 }
 
-nav a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    padding: 10px 20px;
-    line-height: normal;
+.navbar {
     font-size: 20px;
+    font-style: italic;
     font-weight: bold;
 }
 
+nav a {
+    text-decoration: none;
+
+    line-height: normal;
+
+}
+
 nav a:hover {
-    background: #eeeff1;
+    background: #84a6ea;
     border-radius: 50px;
 }
 
@@ -133,7 +135,7 @@ main {
     height: 220px;
 }
 
-.contenedor-productos .tarjeta h4{
+.contenedor-productos .tarjeta h4 {
     font-weight: 600;
 }
 
@@ -313,7 +315,7 @@ main {
     #grid-area {
         grid-template-columns: auto auto;
         grid-template-areas:
-            "header nav"
+            "header header"
             "main main"
             "footer footer";
         grid-template-rows: auto;
@@ -369,7 +371,7 @@ main {
     #grid-area {
         grid-template-columns: auto auto;
         grid-template-areas:
-            "header nav"
+            "header header"
             "main main"
             "footer footer";
         grid-template-rows: auto;
