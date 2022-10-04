@@ -22,7 +22,6 @@ body header {
   grid-area: header;
   width: 100%;
   overflow: hidden;
-  background-image: linear-gradient(to right, #020024, #090979);
 }
 body header .logo {
   width: 250px;

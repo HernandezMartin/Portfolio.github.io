@@ -6,10 +6,9 @@ $fuente: 'Poppins', sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: center;
-
 }
 
-    {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -41,12 +40,6 @@ body {
         grid-area: header;
         width: 100%;
         overflow: hidden;
-        background-image: linear-gradient(to right, #020024, #090979);
-
-        .logo {
-            width: 250px;
-            float: left;
-        }
 
         nav {
             grid-area: header;
@@ -310,7 +303,7 @@ body {
 
         header {
             .logo {
-                width: 250px;
+                width: 200px;
             }
         }
 
